@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131d">
+  <title>TAMILAN AI — Powered by Gemini</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="TAMILAN AI — Powered by Gemini home"><span class="brand-mark">✦</span><span>TAMILAN AI <small>AI STUDIO</small></span></a>
+    <div class="top-status"><span class="status-dot"></span><span id="connection-status">Checking backend…</span></div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="eyebrow">YOUR IDEAS, INTELLIGENTLY BUILT</div>
+      <h1>Build with <span>TAMILAN AI.</span></h1>
+      <p>Write simple TAMILAN AI commands, run them, and chat with Gemini in one place.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="panel editor-panel">
+        <div class="panel-heading">
+          <div><span class="file-icon">▤</span><strong>assistant.nova</strong><span class="badge">TAMILAN AI</span></div>
+          <button class="text-button" id="reset-code">Reset</button>
+        </div>
+        <div class="editor-wrap">
+          <div class="line-numbers" id="line-numbers" aria-hidden="true">1</div>
+          <textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="TAMILAN AI code editor">// Your first TAMILAN AI program
+bot = ai.chat("gemini")
+bot.personality = "You are TAMILAN AI, a friendly and helpful AI assistant."
+bot.say("Hello! I am ready to help.")
+bot.ask("Explain artificial intelligence in simple words.")
+</textarea>
+        </div>
+        <div class="editor-footer"><span>Starter interpreter · v0.1</span><span>JavaScript runtime</span></div>
+        <div class="run-row">
+          <button class="run-button" id="run-code"><span>▶</span> Run program</button>
+          <button class="secondary-button" id="clear-output">Clear output</button>
+        </div>
+        <div class="output-area">
+          <div class="subheading"><span class="terminal-icon">›_</span> OUTPUT <span id="run-state">Ready</span></div>
+          <pre id="output" aria-live="polite">Welcome to TAMILAN AI. Press “Run program” to execute your code.</pre>
+        </div>
+      </div>
+
+      <div class="panel chat-panel">
+        <div class="panel-heading">
+          <div class="assistant-title"><div class="avatar">✦</div><div><strong>TAMILAN AI Assistant</strong><small><span class="status-dot"></span> Gemini-powered chat</small></div></div>
+          <button class="text-button" id="clear-chat">New chat ↻</button>
+        </div>
+        <div class="personality-box">
+          <label for="personality">ASSISTANT PERSONALITY</label>
+          <textarea id="personality" rows="2">You are TAMILAN AI, a friendly and helpful AI assistant. Explain things clearly.</textarea>
+        </div>
+        <div class="chat-messages" id="chat-messages" aria-live="polite">
+          <div class="message assistant-message"><div class="message-avatar">✦</div><div class="bubble"><strong>Welcome to TAMILAN AI!</strong><p>I'm your AI assistant. Ask a question here, or run a TAMILAN AI program in the editor.</p></div></div>
+        </div>
+        <form id="chat-form" class="chat-form">
+          <label class="sr-only" for="chat-input">Message TAMILAN AI</label>
+          <textarea id="chat-input" rows="1" maxlength="12000" placeholder="Message TAMILAN AI…" required></textarea>
+          <button id="send-button" type="submit" aria-label="Send message">↑</button>
+        </form>
+        <div class="chat-note">AI responses can be incorrect. Don't send secrets or sensitive personal information.</div>
+      </div>
+    </section>
+
+    <section class="language-guide">
+      <div><div class="eyebrow">THE TAMILAN AI LANGUAGE</div><h2>Small commands. Big ideas.</h2></div>
+      <div class="syntax-grid">
+        <article><code>bot = ai.chat("gemini")</code><p>Create an AI assistant.</p></article>
+        <article><code>bot.personality = "Be helpful"</code><p>Set the assistant's instructions.</p></article>
+        <article><code>bot.say("Hello!")</code><p>Print a message to output.</p></article>
+        <article><code>bot.ask("What is AI?")</code><p>Ask Gemini and show the reply.</p></article>
+      </div>
+      <p class="guide-note">This is an early TAMILAN AI prototype. It supports these commands plus simple variables and output; it is not yet a general-purpose programming language.</p>
+    </section>
+  </main>
+
+  <footer><span>✦ TAMILAN AI — Powered by Gemini</span><span>Built for curious minds.</span></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
